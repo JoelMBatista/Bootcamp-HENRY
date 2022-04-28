@@ -26,6 +26,18 @@ function BinarioADecimal(num) {
 }
 console.log(BinarioADecimal('10011'))
 
+//! REVIEW
+// 10011 --> 1x2**4 + 1x2**3 + 0x2**2 + 0x2**1 + 0x2**0
+//       --> 
+
+function BinarioADecimal(num){
+  let arreglo = num.split('')
+  
+
+
+
+}
+
 
 /*
 $         PASAR DE DECIMAL A BINARIO 
