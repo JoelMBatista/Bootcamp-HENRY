@@ -6,7 +6,8 @@ ejemplo: const newCounter = counter();
 newCounter(); // 1
 newCounter(); // 2
 */
-function counter() {
+function counter(contador = 0) {
+  return () => (contador = contador + 1);
 }
 
 
