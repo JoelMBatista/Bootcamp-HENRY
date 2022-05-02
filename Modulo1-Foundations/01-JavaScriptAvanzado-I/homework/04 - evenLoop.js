@@ -5,9 +5,9 @@ $ Event loop
 
 function printing() {
    console.log(1)
-   setTimeout(function() { console.log(2); }, 1000)
+   setTimeout(function() { console.log(2); }, 000)
    setTimeout(function() { console.log(3); }, 0)
    console.log(4)
 }
 
-printing()
+printing() // 1, 4, 2, 3
