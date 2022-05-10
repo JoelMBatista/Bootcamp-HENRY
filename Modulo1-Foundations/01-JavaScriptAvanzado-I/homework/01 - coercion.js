@@ -16,7 +16,7 @@ console.log(5 && 2)
 console.log(2 && 5)
 console.log(5 || 0)
 console.log(0 || 5)
-console.log([3]+[3]-[10]) //23
+console.log([3]+[3]-[10]) //23 xq ?
 console.log(3>2>1) //false
 //[] == ![]
 

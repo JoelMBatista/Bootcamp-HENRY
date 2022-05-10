@@ -27,4 +27,4 @@ function getFood(food) {
     return snack
 }
 
-getFood(false)
+getFood(true)
