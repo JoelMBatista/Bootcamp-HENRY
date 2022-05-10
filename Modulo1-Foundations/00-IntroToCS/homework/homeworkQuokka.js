@@ -17,27 +17,17 @@ $           PASAR DE BINARIO A DECIMAL
 ?              0 x 2^3 = 0 x  8 =  0
 ?              1 x 2^4 = 1 x 16 = 16
 */
-function BinarioADecimal(num) {
-  let sum = 0
-  for (let i = 0; i < num.length; i++) {
-    sum += num[i] * 2 ** (num.length - 1 - i)
-  }
-  return sum
-}
-console.log(BinarioADecimal('10011'))
-
 //! REVIEW
 // 10011 --> 1x2**4 + 1x2**3 + 0x2**2 + 0x2**1 + 0x2**0
 //       --> 
-
-function BinarioADecimal(num){
-  let arreglo = num.split('')
-  
-
-
-
+function BinarioADecimal(num) {
+  let sum = 0;
+  for (let i = 0; i < num.length; i++) {
+    sum += num[i] * 2 ** (num.length - 1 - i);
+  }
+  return sum;
 }
-
+console.log(BinarioADecimal('10011'));
 
 /*
 $         PASAR DE DECIMAL A BINARIO 
@@ -48,8 +38,6 @@ $         PASAR DE DECIMAL A BINARIO
 ?              4 / 2 = 2 resto 0 ----> 0  
 ?              2 / 2 = 1 ------------> 1 
 */
-
-
 function DecimalABinario(num) {
   var binario = '';
   while (num > 0) {

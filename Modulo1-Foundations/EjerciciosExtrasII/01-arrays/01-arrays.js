@@ -1,14 +1,15 @@
-
+/*
+[1,2,"x"]
+["x",2,1]
+Invertir el orden de los elementos del array que recibe por parametro. Que los ultimos elementos, pasen a ser los primeros
+DETALLE: En caso de que el elemento contenga mas de 1 digito, el mismo NO debera ser devuelto
+No vale usar el metodo "reverse"
+[1, 4, 24, 10, 8, 6]
+*/
 function invertirOrden(array) {
-    // [1,2,"x"]
-    // ["x",2,1]
-    // Invertir el orden de los elementos del array que recibe por parametro
-    // Que los ultimos elementos, pasen a ser los primeros
-    // DETALLE: En caso de que el elemento contenga mas de 1 digito, el mismo NO 
-    // debera ser devuelto
-    // No vale usar el metodo "reverse"
-    // [1, 4, 24, 10, 8, 6]
-
+    let invertido=[]
+    
+    
 };
 
 
