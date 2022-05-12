@@ -53,9 +53,9 @@ var creaFuncion = function(){
 
   for ( var i=0; i < 3; i++){
     arreglo.push(
-      function(){
-        console.log(i);
-      }
+      (function(j){
+        return function(){console.log(j)};
+      }, [i])
     )
   }
   return arreglo;
@@ -63,19 +63,18 @@ var creaFuncion = function(){
 
 var arr = creaFuncion();
 
-arr[0]() // 3 sale un 3, qué esperaban ustedes??
-arr[2]() // 3
-arr[1]() // 3
+console.log(arr)
 
+//********************************************************* */
+function saludos(inicial,cosa,lang){
+  if (lang == 'en') {return (nombre) => `${inicial} Hello ${nombre}${cosa}`}
+  if (lang == 'it') {return (nombre) => `${inicial} Ciao ${nombre}${cosa}`}
+  if (lang == 'es') {return (nombre) => `${inicial} Hola ${nombre}${cosa}`}
+}
+let saludoEng = saludos('# ', '!', 'en');
+let saludoIta = saludos('# ', '!', 'it');
+let saludoEsp = saludos('# ', '!', 'es');
 
-
-
-
-
-
-
-
-
-
-
-
+console.log(saludoEng('Pepe'));
+console.log(saludoIta('Pepe'));
+console.log(saludoEsp('Pepe'));

@@ -38,7 +38,7 @@ describe('counter', () => {
  });
 });
 
-describe('cacheFunction(cb)', function() {
+xdescribe('cacheFunction(cb)', function() {
  const cb = function(x) {
    return x * 2;
  };

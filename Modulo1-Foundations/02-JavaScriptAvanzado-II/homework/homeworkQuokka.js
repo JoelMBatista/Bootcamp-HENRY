@@ -11,7 +11,7 @@ ejemplo: const newCounter = counter();
 newCounter(); // 1
 newCounter(); // 2
 */
-function counter(contador = 0) {return ()=>(contador = contador + 1)}
+function counter(contador = 0) {return ()=>(contador += 1)}
 
 const contador = counter();
 console.log(contador());
