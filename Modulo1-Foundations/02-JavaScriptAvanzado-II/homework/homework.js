@@ -20,11 +20,7 @@ otroContador()      // 2
 otroContador()      // 3
 */
 function counter(contador = 0) {return () => (contador += 1)}
-
 const nuevoContador = counter()
-console.log(nuevoContador())
-console.log(nuevoContador())
-console.log(nuevoContador())
 
 /*
 Ejercicio 2
@@ -33,48 +29,21 @@ Tu tarea aquí es lograr, mediante un closure, que cacheFunction actúe como una
 
 cacheFunction debe retornar una función. Esta función debe aceptar un argumento (arg) e invocar a cb con ese argumento; hecho eso, debe guardar el argumento junto con el resultado de la invocación (tip: usá un objeto donde cada propiedad sea el argumento, y su valor el resultado de la correspondiente invocación a cb) de manera que, la próxima vez que reciba el mismo argumento, no sea necesario volver a invocar a cb, porque el resultado estará guardado en la "memoria caché".
 
-
 Ejemplo:
-function square(n){
-  return n * n
-}
-
+function square(n){return n * n}
 const squareCache = cacheFunction(square)
 
 squareCache(5)    // invocará a square(5), almacenará el resultado y lo retornará
 squareCache(5)    // no volverá a invocar a square, simplemente buscará en la caché cuál es el resultado de square(5) y lo retornará (tip: si usaste un objeto, podés usar hasOwnProperty) 
 */
-/*
- *function saludar(nombre){return `hola ${nombre}`}
- *function cacheFunction(cb) {
- * let nombre= cb
- *  return saludar(`${nombre}`)
- *}
- *console.log(cacheFunction())
- */
-//let fn= function(){return `Hola ${nomb}`}
+
 function cacheFunction(cb) {
-
-}
-//const saludar = cacheFunction(cb)
-console.log(cacheFunction('daniel'))
-
-/***************************************************/
-
-function saludar(nombre) {
-  console.log('Hola ' + nombre);
+  let cache = {};
+  return (arg) => cache.hasOwnProperty(arg) ? cache[arg] : cache[arg] = cb(arg)
 }
 
-function procesarEntradaUsuario(callback) {
-  var nombre = console.log('Por favor ingresa tu nombre.');
-  callback(nombre);
-}
-
-console.log(procesarEntradaUsuario(saludar))
-/****************************************************/
 
 // Bind
-
 var instructor = {
   nombre: 'Franco',
   edad: 25,
@@ -89,6 +58,7 @@ function getNombre() {
   return this.nombre;
 }
 
+
 /*
   Ejercicio 3
   IMPORTANTE: no modificar el código de arriba (variables instructor y alumno, y función getNombre)
@@ -98,31 +68,43 @@ function getNombre() {
 let getNombreInstructor = getNombre.bind(instructor)     //function(getNombre){return instructor.nombre}
 let getNombreAlumno = getNombre.bind(alumno)            //function (getNombre){return alumno.nombre}
 
-console.log(getNombreInstructor())
-console.log(getNombreAlumno())
+
 /*
   Ejercicio 4
   
   Sin modificar la función crearCadena, usar bind para guardar, en las tres variables declaradas a continuación, tres funciones que retornen una cadena (string) y el delimitador especificado (asteriscos, guiones, y guiones bajos, respectivamente). Las funciones obtenidas deberían recibir solamente un argumento - la cadena de texto - ya que los otros argumentos habrán sido "bindeados". 
 */
-
 function crearCadena(delimitadorIzquierda, delimitadorDerecha, cadena) {
   return delimitadorIzquierda + cadena + delimitadorDerecha;
 }
+/***************************************************/
+/*                  METODO 1                       */
+/***************************************************/
 
 let textoAsteriscos = (cadena) => `*${cadena}*`;   //function(cadena){return '*'+cadena+'*'}
 let textoGuiones = (cadena)=> `-${cadena}-`       //function (cadena){return '-' + cadena + '-'}
 let textoUnderscore = (cadena)=>`_${cadena}_`     //function (cadena){return '_' + cadena + '_'}
 
-console.log(textoAsteriscos('Hola'))
-console.log(textoGuiones('Hola'))
-console.log(textoUnderscore('Hola'))
+/***************************************************/
+/*                  METODO 2                       */
+/***************************************************/
+//let textoAsteriscos = crearCadena.bind(this, `*`, `*`);
+//let textoGuiones = crearCadena.bind(this,`-`,`-`)
+//let textoUnderscore = crearCadena.bind(this,`_`,`_`)
+//
+//function textoAsteriscos(cadena){return `*${cadena}*`;}
+//function textoGuiones(cadena){return `-${cadena}-`}
+//function textoUnderscore(cadena){return `_${cadena}_`}
+//
+//console.log(textoAsteriscos(`Hola`))
+//console.log(textoGuiones(`Hola`))
+//console.log(textoUnderscore(`Hola`))
 
 
 
-// No modifiquen nada debajo de esta linea
-// --------------------------------
-
+// --------------------------------------- //
+// No modifiquen nada debajo de esta linea //
+// --------------------------------------- //
 module.exports = {
   counter,
   cacheFunction,
