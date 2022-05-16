@@ -1,6 +1,7 @@
-<h1 align="center">ESTRUCTURA DE DATOS I</h1>
-<br>
-<br>
+<h1 align="center">ESTRUCTURA DE DATOS I</h1>   
+<h4 align="left">Por Daniel Calderon</h4>
+
+----
 
 - **RECURSIVIDAD**
     
@@ -49,7 +50,7 @@
     
     Tenemos distintos tipos de estructuras de datos.
     
-    ![Untitled](/Modulo1-Foundations/_src/Apuntes/EstructurasDeDatos.png)
+    ![Untitled](/Modulo1-Foundations/_src/apuntes/EstructurasDeDatosI.png)
     
     - **ARRAY**
         
@@ -59,7 +60,7 @@
         ARRAY = ["Hola", 245, false, 325, "Ejemplos"]
         ```
         
-        ![Untitled](/Modulo1-Foundations/_src/Apuntes/EstructurasDeDatos-arrays.png)
+        ![Untitled](/Modulo1-Foundations/_src/apuntes/EstructurasDeDatosI-arrays.png)
         
         Cada elemento de un arreglo tiene una dirección a al que el intérprete accede directamente. Se pueden agregar y sacar elementos al comienzo y al final del arreglo.
         
@@ -153,9 +154,3 @@
         	size() {return this.queue.length;}
         }
         ```
-<br>
-<br>
-<br>
-<br>
-<br>
-<h3 align="right"> Por Daniel Calderon</h3>

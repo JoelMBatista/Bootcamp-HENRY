@@ -1,6 +1,7 @@
-<h1 align="center">ESTRUCTURA DE DATOS II</h1>
-<br>
-<br>
+<h1 align="center">ESTRUCTURA DE DATOS II</h1>   
+<h3 align="left">Por Daniel Calderon</h3>
+
+----
 
 - **LISTAS ENLAZADAS**
     
@@ -95,10 +96,3 @@
 - **HASH TABLE**
     
     Las **Hash Tables** son estructuras de datos que te permiten crear una lista de valores en par-clave. De este modo podremos retornar un valor a partir de su “contraseña” que tendremos de antemano. En otras palabras, una **Hash Function** le asignará un valor único a una variable, para que podamos obtenerla más tarde. (Esto está asociado a la encriptación).
-    
-<br>
-<br>
-<br>
-<br>
-<br>
-<h3 align="right"> Por Daniel Calderon</h3>
