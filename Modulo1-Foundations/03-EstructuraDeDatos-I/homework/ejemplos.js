@@ -39,10 +39,40 @@ function fibonacci(n) {
   }
   return fibo[n]
 }
-console.log(fibonacci(10));
-console.log(fibonacci(100));
-console.log(fibonacci(1000));
-console.log(fibonacci(10000));
-console.log(fibonacci(100000));
-console.log(fibonacci(1000000));
+console.log(fibonacci(10))
+console.log(fibonacci(100))
+console.log(fibonacci(1000))
+console.log(fibonacci(10000))
+console.log(fibonacci(100000))
+console.log(fibonacci(1000000))
 console.log(fibonacci(10000000))
+
+
+
+//$ ESTRUCTURAS DE DATOS
+
+let arreglo = [1,2,3,4,5,6,4,5,4,5,4,2,4,5,2,2]
+console.log(arreglo)
+
+let arreglo1 = new Set(arreglo)
+console.log(arreglo1)
+
+//******************/
+let stack = []
+stack.push(1)
+stack.push(10)
+console.log(stack)
+let i = stack.pop()
+console.log(i)
+console.log(stack)
+
+function f(b) {
+  var a = 12
+  return a + b + 35
+}
+
+function g(x) {
+  var m = 4
+  return f(m * x)
+}
+console.log(g(21))
