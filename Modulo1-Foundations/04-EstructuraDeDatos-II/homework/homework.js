@@ -11,7 +11,16 @@ Implementar la clase LinkedList, definiendo los siguientes métodos:
   En caso de que la búsqueda no arroje resultados, search debe retornar null.
 */
 
-function LinkedList() {}
+function LinkedList(){
+  this.dato= {}
+  this.head = null
+}
+
+let lista = new LinkedList(dato)
+
+lista.prototype.agregar = function add(dato){
+  
+}
 
 function Node(value) {}
 
