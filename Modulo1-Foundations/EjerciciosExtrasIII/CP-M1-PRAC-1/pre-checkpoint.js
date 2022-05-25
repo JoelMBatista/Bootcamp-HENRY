@@ -1,4 +1,4 @@
-const { Queue, Node, LinkedList, BinarySearchTree } = require('./DS.js');
+const { Queue, Node, LinkedList, BinarySearchTree } = require('./DS.js.js');
 
 // --------- ¡No modificar nada arriba de esta línea! ----------
 
