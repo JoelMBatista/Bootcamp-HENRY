@@ -101,5 +101,12 @@ function crearCita(cita, callback) {
 function logCita(cita) {
   console.log(cita);
 }
-
 crearCita('come tus vegetales!', logCita);
+
+
+var persona = {nombre: 'Guille', apellido: 'Aszyn',}
+var logNombre = function(){console.log(this.nombre);}
+var logNombrePersona = logNombre.bind(persona);
+// el primer parametro de bind es el this!
+logNombrePersona();
+// BIND DEVUELVE UNA FUNCION!

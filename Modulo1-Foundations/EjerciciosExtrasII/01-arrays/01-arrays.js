@@ -6,18 +6,31 @@ DETALLE: En caso de que el elemento contenga mas de 1 digito, el mismo NO debera
 No vale usar el metodo "reverse"
 [1, 4, 24, 10, 8, 6]
 */
+let array = [1, 4, 24, 10, 8, 6]
 function invertirOrden(array) {
     let invertido=[]
-    
-    
-};
+    for (let i = array.length - 1; i >= 0; i--) {
+        invertido.push(array[i])
+    }    
+    return invertido
+}
+console.log(invertirOrden(array))
 
 
+// Entre los dos array's que recibe la funcion por parametro
+// Buscar y retornar el valor en comun entre ellos
 function numeroEnComun(array1, array2) {
-    // Entre los dos array's que recibe la funcion por parametro
-    // Buscar y retornar el valor en comun entre ellos
-    
-};
+    let nuevoArray = []
+    for (i = 0; i > array1.length-1;i++){
+        if (array[i] === array2){
+            array.push(nuevoArray[i]+1)
+        }
+    }
+    return nuevoArray
+}
+let array1 = [2,5,4,9,7]
+let array2 = [1,5,6,7,9]
+console.log(numeroEnComun(array1,array2))
 
 
 

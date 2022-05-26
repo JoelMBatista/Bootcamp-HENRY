@@ -25,16 +25,7 @@ const producto = function (array) {
 //     }
 // }
 let obj = {
-  school: {
-    hogwarts: {
-      headmaster: {
-        name: {
-          first: "Albus",
-          last: "Dumbledore",
-        },
-      },
-    },
-  },
+  school: {hogwarts: {headmaster: {name: {first: "Albus",last: "Dumbledore"}}}},
   prop1: 5,
   prop2: 6,
 };
