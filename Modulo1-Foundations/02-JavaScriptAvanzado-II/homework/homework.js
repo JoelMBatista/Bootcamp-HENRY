@@ -22,6 +22,10 @@ otroContador()      // 3
 function counter(contador = 0) {return () => (contador += 1)}
 const nuevoContador = counter()
 
+console.log(nuevoContador());
+console.log(nuevoContador());
+console.log(nuevoContador());
+
 /*
 Ejercicio 2
 
@@ -38,8 +42,9 @@ squareCache(5)    // no volverá a invocar a square, simplemente buscará en la 
 */
 
 function cacheFunction(cb) {
-  let cache = {};
-  return (arg) => cache.hasOwnProperty(arg) ? cache[arg] : cache[arg] = cb(arg)
+
+  //let cache = {};
+  //return (arg) => cache.hasOwnProperty(arg) ? cache[arg] : cache[arg] = cb(arg)
 }
 
 
@@ -68,6 +73,8 @@ function getNombre() {
 let getNombreInstructor = getNombre.bind(instructor)     //function(getNombre){return instructor.nombre}
 let getNombreAlumno = getNombre.bind(alumno)            //function (getNombre){return alumno.nombre}
 
+console.log(getNombreInstructor())
+console.log(getNombreAlumno())
 
 /*
   Ejercicio 4

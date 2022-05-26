@@ -90,3 +90,16 @@ _753 = saludo('', 753);
 
 console.log(_159('Daniel'));
 console.log(_753('Martina'));
+
+//* CALL BACK
+
+function crearCita(cita, callback) {
+  var miCita = 'Como yo siempre digo, ' + cita;
+  callback(miCita); // 2
+}
+
+function logCita(cita) {
+  console.log(cita);
+}
+
+crearCita('come tus vegetales!', logCita);
