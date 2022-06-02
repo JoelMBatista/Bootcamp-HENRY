@@ -1,5 +1,4 @@
-"use strict";
-
+"use strict"
 /*
 Implementar la clase LinkedList, definiendo los siguientes métodos:
   - add: agrega un nuevo nodo al final de la lista;
@@ -15,32 +14,27 @@ function LinkedList(){     // mi papel
   this.head = null
 }
 
-function Node(dato){
-  this.dato = dato
+function Node(value){
+  this.value = value
   this.next = null
 }
 
-//LinkedList.prototype
-
-
-
-let lista = new LinkedList()
-
-console.log(lista)
-
-
-
-
-
-
-
-
-
-
-
-//lista.prototype.agregar = function add(dato){
+LinkedList.prototype.add = function(){
+  let newnode = new Node(value)
+  let actual = this.head
+  if (!actual){
+    this.head = node
+    this.next
+  }
   
 }
+
+
+
+
+
+LinkedList.prototype.add = function() {}
+LinkedList.prototype.add = function() {}
 
 function Node(value) {}
 
