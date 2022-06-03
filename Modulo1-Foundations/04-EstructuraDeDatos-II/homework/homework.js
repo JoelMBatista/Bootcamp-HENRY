@@ -1,4 +1,5 @@
-"use strict"
+"use strict";
+
 /*
 Implementar la clase LinkedList, definiendo los siguientes métodos:
   - add: agrega un nuevo nodo al final de la lista;
@@ -10,31 +11,7 @@ Implementar la clase LinkedList, definiendo los siguientes métodos:
   En caso de que la búsqueda no arroje resultados, search debe retornar null.
 */
 
-function LinkedList(){     // mi papel
-  this.head = null
-}
-
-function Node(value){
-  this.value = value
-  this.next = null
-}
-
-LinkedList.prototype.add = function(){
-  let newnode = new Node(value)
-  let actual = this.head
-  if (!actual){
-    this.head = node
-    this.next
-  }
-  
-}
-
-
-
-
-
-LinkedList.prototype.add = function() {}
-LinkedList.prototype.add = function() {}
+function LinkedList() {}
 
 function Node(value) {}
 
