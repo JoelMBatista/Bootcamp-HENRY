@@ -1,3 +1,7 @@
+let array  = [1, 4, 24, 1, 6]
+let array1 = [2, 5, 40, 7, 9]
+let array2 = [1, 5, 60, 7, 9]
+let array3 = [[1, 3], [10, 20], [4, 5], 2]
 /*
 [1,2,"x"]
 ["x",2,1]
@@ -6,7 +10,6 @@ DETALLE: En caso de que el elemento contenga mas de 1 digito, el mismo NO debera
 No vale usar el metodo "reverse"
 [1, 4, 24, 10, 8, 6]
 */
-let array = [1, 4, 24, 10, 8, 6]
 function invertirOrden(array) {
     let invertido=[]
     for (let i = array.length - 1; i >= 0; i--) {
@@ -17,32 +20,32 @@ function invertirOrden(array) {
 console.log(invertirOrden(array))
 
 
-// Entre los dos array's que recibe la funcion por parametro
-// Buscar y retornar el valor en comun entre ellos
+// Buscar y retornar el valor en comun entre los 2 array
 function numeroEnComun(array1, array2) {
-    let nuevoArray = []
-    for (i = 0; i > array1.length-1;i++){
-        if (array[i] === array2){
-            array.push(nuevoArray[i]+1)
+    const arrayEnComun = [];
+    for (var i = 0; i < array1.length; i++) {
+      for (var j = 0; j < array2.length; j++) {
+        if (array1[i] === array2[j]) {
+          arrayEnComun.push(array1[i]);
         }
+      }
     }
-    return nuevoArray
+    return arrayEnComun;
 }
-let array1 = [2,5,4,9,7]
-let array2 = [1,5,6,7,9]
 console.log(numeroEnComun(array1,array2))
 
 
 
-function sumaDeArrays(array) {
-    // El array recibido por parametro es un array multidimencional con array's que contienen elementos de tipo number
-    // Tienen que devolver UN SOLO array que solo contenga elementos de tipo number
-    // Sumando los elementos de cada array que contenga dos elementos, y devolviendo la suma del mismo
-    // OJO: Si el elemento dentro del array que ingresa por prop, ya es de tipo number, deben devolverlo como tal dentro del array que retornan.
-    // Ejemplo: [[1, 3], [10, 20], [4, 5], 2]
-   
-};
-
+// El array recibido por parametro es un array multidimencional con array's que contienen elementos de tipo number
+// Tienen que devolver UN SOLO array que solo contenga elementos de tipo number
+// Sumando los elementos de cada array que contenga dos elementos, y devolviendo la suma del mismo
+// OJO: Si el elemento dentro del array que ingresa por prop, ya es de tipo number, deben devolverlo como tal dentro del array que retornan.
+// Ejemplo: [[1, 3], [10, 20], [4, 5], 2]
+console.log(array3)
+console.log(array3.flat);
+console.log(array3)
+function sumaDeArrays(array4){
+}
 
 function mismoValorMismosElementos(numero, divisor) {
     // Tiene que devolver un array con la misma cantidad de elementos que el valor del divisor
