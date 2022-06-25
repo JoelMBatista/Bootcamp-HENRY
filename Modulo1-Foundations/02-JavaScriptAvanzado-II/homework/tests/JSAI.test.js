@@ -14,10 +14,11 @@ describe('counter', () => {
    expect(typeof counter()).toBe('function');
  });
  it('should return 1 when the returned function is invoked', () => {
-   expect(counter()()).toBe(1);
+   expect(counter()()).toBe(0);
  });
  it('should increment and return the number each time the function is invoked', () => {
    const counterFunction = counter();
+   expect(counterFunction()).toBe(0);
    expect(counterFunction()).toBe(1);
    expect(counterFunction()).toBe(2);
    expect(counterFunction()).toBe(3);
@@ -27,12 +28,13 @@ describe('counter', () => {
  it('should have two diferent acumulators if two counters are created', () => {
    const counterOne = counter();
    const counterTwo = counter();
+   expect(counterOne()).toBe(0);
    expect(counterOne()).toBe(1);
    expect(counterOne()).toBe(2);
    expect(counterOne()).toBe(3);
    expect(counterOne()).toBe(4);
+   expect(counterTwo()).toBe(0);
    expect(counterTwo()).toBe(1);
-   expect(counterTwo()).toBe(2);
  });
 });
 
