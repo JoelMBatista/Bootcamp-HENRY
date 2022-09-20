@@ -1,7 +1,7 @@
 "use strict";
 
 /*
- Implementar la clase BinarySearchTree, definiendo los siguientes métodos recursivos:
+  Implementar la clase BinarySearchTree, definiendo los siguientes métodos recursivos:
   - size: retorna la cantidad total de nodos del árbol
   - insert: agrega un nodo en el lugar correspondiente
   - contains: retorna true o false luego de evaluar si cierto valor existe dentro del árbol
