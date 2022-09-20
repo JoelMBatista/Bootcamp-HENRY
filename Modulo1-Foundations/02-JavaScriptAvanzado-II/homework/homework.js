@@ -1,10 +1,6 @@
 "use strict";
 
-//$ Closures
-
 /*
-Ejercicio 1
-
 La función counter debe retornar otra función. Esta función retornada debe actuar como un contador, retornando un valor numérico que empieza en 1 e incrementa con cada invocación.
 
 Ejemplo:
@@ -19,16 +15,8 @@ Ejemplo:
   otroContador()      // 3
 */
 function counter(count = 0) {
-  return ()=> count++
+  // Tú código acá
 }
-let contador= counter()
-let contador2 = counter()
-console.log(contador())
-console.log(contador())
-console.log(contador())
-console.log(contador2())
-console.log(contador2())
-console.log(contador2())
 
 /*
 Tu tarea aquí es lograr, mediante un closure, que cacheFunction actúe como una memoria caché para el callback que recibe por parámetro (cb); es decir, que "recuerde" el resultado de cada operación que hace, de manera que, al realizar una operación por segunda vez, se pueda obtener el resultado de esa "memoria" sin tener que efectuar otra vez cálculos que ya se hicieron anteriormente.
@@ -44,15 +32,7 @@ squareCache(5)    // invocará a square(5), almacenará el resultado y lo retorn
 squareCache(5)    // no volverá a invocar a square, simplemente buscará en la caché cuál es el resultado de square(5) y lo retornará (tip: si usaste un objeto, podés usar hasOwnProperty) 
 */
 function cacheFunction(cb) {
-  var cache = {};
-  return function (a) {
-    if (cache.hasOwnProperty(a)) {
-      return cache[a];
-    } else {
-      cache[a] = cb(a);
-      return cache[a];
-    }
-  };
+  // Tú código acá
 }
 
 // Bind
@@ -66,22 +46,15 @@ var alumno = {
   nombre: "Juan",
   curso: "FullStack",
 }
-
-function getNombre() {
-  return this.nombre;
-}
-
 /*
 IMPORTANTE: no modificar el código de arriba (variables instructor y alumno, y función getNombre)
 Usando el método bind() guardar, en las dos variables declaradas a continuación, dos funciones que actúen como getNombre pero retornen el nombre del instructor y del alumno, respectivamente.
 */
+function getNombre() {
+  return this.nombre
+}
 
 
-let getNombreInstructor = getNombre.bind(instructor);
-let getNombreAlumno = getNombre.bind(alumno)
-
-console.log(getNombreInstructor())
-console.log(getNombreAlumno())
 
 /*
 Sin modificar la función crearCadena, usar bind para guardar, en las tres variables declaradas a continuación, tres funciones que retornen una cadena (string) y el delimitador especificado (asteriscos, guiones, y guiones bajos, respectivamente). Las funciones obtenidas deberían recibir solamente un argumento - la cadena de texto - ya que los otros argumentos habrán sido "bindeados". 
@@ -91,13 +64,6 @@ function crearCadena(delimitadorIzquierda, delimitadorDerecha, cadena) {
   return delimitadorIzquierda + cadena + delimitadorDerecha;
 }
 
-let textoAsteriscos = crearCadena.bind(this, '*', '*')
-let textoGuiones = crearCadena.bind(this, '-', '-')
-let textoUnderscore = crearCadena.bind(this, '_', '_');
-
-console.log(textoAsteriscos(' Hola '));
-console.log(textoGuiones(' Hola '));
-console.log(textoUnderscore(' Hola '));
 
 
 
