@@ -44,6 +44,15 @@ squareCache(5)    // invocará a square(5), almacenará el resultado y lo retorn
 squareCache(5)    // no volverá a invocar a square, simplemente buscará en la caché cuál es el resultado de square(5) y lo retornará (tip: si usaste un objeto, podés usar hasOwnProperty) 
 */
 function cacheFunction(cb) {
+  var cache = {};
+  return function (a) {
+    if (cache.hasOwnProperty(a)) {
+      return cache[a];
+    } else {
+      cache[a] = cb(a);
+      return cache[a];
+    }
+  };
 }
 
 // Bind

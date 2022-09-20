@@ -1,13 +1,11 @@
 'use strict'
 
 function BinarioADecimal(num) {
-  // tu codigo aca
-
+  // Tú código acá
 }
 
 function DecimalABinario(num) {
-  // tu codigo aca
-
+  // Tú código acá
 }
 
 
